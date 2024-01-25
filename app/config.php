@@ -19,3 +19,6 @@ define('UPLOADS', ROOT . 'uploads' . DS);
 define('CSS', URL . 'assets/css/');
 define('IMG', URL . 'assets/img/');
 define('JS', URL . 'assets/js/');
+
+// Carregamento de todas as funções
+require_once APP . 'functions.php';
