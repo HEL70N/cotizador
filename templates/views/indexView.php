@@ -107,7 +107,58 @@
             </div>
 
             <div class="col-lg-4 col-12">
-
+                <div class="card">
+                    <div class="card-header">Resumo da cotação</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Quantidade</th>
+                                        <th>Preço</th>
+                                        <th class="text-right">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Camiseta</td>
+                                        <td>1</td>
+                                        <td>399.00</td>
+                                        <td class="text-right">399.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ukulele</td>
+                                        <td>2</td>
+                                        <td>250.00</td>
+                                        <td class="text-right">500.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right" colspan="3">Subtotal</td>
+                                        <td class="text-right">123.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right" colspan="3">Impostos</td>
+                                        <td class="text-right">123.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right" colspan="3">Envio</td>
+                                        <td class="text-right">50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right" colspan="4"><b>Total</b>
+                                            <h3 class="text-success"><b>799.00</b></h3>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Descarregar PDF</button>
+                        <button class="btn btn-success">Enviar por Correio</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
