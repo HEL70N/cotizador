@@ -152,3 +152,23 @@ function deleteItem($id)
     // Não tenho correspondência ou resultados
     return false;
 }
+
+function addItem($item)
+{
+    $itens = getItens();
+
+    // O id já existe em nossos itens
+    // Podemos atualizar as informações em vez de adicioná-las
+    if (getItem($item['id']) !== false) {
+        foreach ($itens as $i => $eItem) {
+            if ($item['id'] === $eItem['id']) {
+                $_SESSION['newQuote']['itens'][$i] = $item;
+                return true;
+            }
+        }
+    }
+
+    // Não existe na lista, é simplesmente adicionado
+    $_SESSION['newQuote']['itens'][] = $item;
+    return true;
+}
