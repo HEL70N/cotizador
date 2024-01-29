@@ -22,5 +22,10 @@ define('CSS', URL . 'assets/css/');
 define('IMG', URL . 'assets/img/');
 define('JS', URL . 'assets/js/');
 
+// Personalização
+define('APP_NAME', 'Cotação');
+define('TAXES_RATE', 16);
+define('SHIPPING', 99.50);
+
 // Carregamento de todas as funções
 require_once APP . 'functions.php';
