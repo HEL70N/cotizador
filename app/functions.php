@@ -86,3 +86,38 @@ function restartQuote()
 
     return true;
 }
+
+function getItens()
+{
+    $itens = [];
+
+    // Se não existe a cotação, obviamente está vázia o array
+    if (!isset($_SESSION['newQuote']['itens'])) {
+        return $itens;
+    }
+
+    // A cotação existe, se assina o valor
+    $itens = $_SESSION['newQuote']['itens'];
+    return $itens;
+}
+
+function getItem($id)
+{
+    $itens = getItens();
+
+    // Se não houver itens
+    if (empty($itens)) {
+        return false;
+    }
+
+    // Se houver itens, iremos iterar
+    foreach ($itens as $item) {
+        // Valide se existe com o id passado
+        if ($item['id'] === $id) {
+            return $item;
+        }
+    }
+
+    // Não tenho correspondência ou resultados
+    return false;
+}
