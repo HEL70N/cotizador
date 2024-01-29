@@ -121,3 +121,34 @@ function getItem($id)
     // Não tenho correspondência ou resultados
     return false;
 }
+
+function deleteItens()
+{
+    $_SESSION['newQuote']['itens'] = [];
+
+    recalculateQuote();
+
+    return true;
+}
+
+function deleteItem($id)
+{
+    $itens = getItens();
+
+    // Se não houver itens
+    if (empty($itens)) {
+        return false;
+    }
+
+    // Se houver itens, iremos iterar
+    foreach ($itens as $i => $item) {
+        // Valide se existe com o id passado
+        if ($item['id'] === $id) {
+            unset($_SESSION['newQuote']['itens'][$i]);
+            return true;
+        }
+    }
+
+    // Não tenho correspondência ou resultados
+    return false;
+}
