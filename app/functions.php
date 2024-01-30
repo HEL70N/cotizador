@@ -226,3 +226,8 @@ function jsonOutput($json)
 
     return true;
 }
+
+function hook_minhaFuncao()
+{
+    echo "Estou sendo executado em ajax.php de forma automatica.";
+}
