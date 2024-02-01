@@ -4,7 +4,7 @@ session_start();
 
 // Para saber se estamos no servidor local
 define('IS_LOCAL', in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']));
-define('URL', (IS_LOCAL ? 'http://127.0.0.1/cotizador' : 'URL DE SERVIDOR EM PORDUÇÃO'));
+define('URL', (IS_LOCAL ? 'http://127.0.0.1/cotizador/' : 'URL DE SERVIDOR EM PORDUÇÃO'));
 
 // Rotas das pastas
 define('DS', DIRECTORY_SEPARATOR);
